@@ -1,0 +1,28 @@
+{
+  "name": "log4js-nested",
+  "version": "0.1.0",
+  "description": "log4js with nested loggers",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alekzonder/log4js-nested.git"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "keywords": [
+    "log",
+    "logger",
+    "log4js",
+    "nested"
+  ],
+  "author": "alekzonder <alekzonder@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alekzonder/log4js-nested/issues"
+  },
+  "homepage": "https://github.com/alekzonder/log4js-nested",
+  "dependencies": {
+    "log4js": "^0.6.36"
+  }
+}
