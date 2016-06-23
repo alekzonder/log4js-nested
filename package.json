@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "log4js with nested loggers",
   "main": "index.js",
+  "scripts": {
+      "test": "./node_modules/.bin/mocha tests"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/alekzonder/log4js-nested.git"
@@ -10,6 +13,7 @@
   "engines": {
     "node": ">=4"
   },
+  "files": ["index.js", "wrap.js", "Wrapper.js"],
   "keywords": [
     "log",
     "logger",
@@ -23,6 +27,10 @@
   },
   "homepage": "https://github.com/alekzonder/log4js-nested",
   "dependencies": {
-    "log4js": "^0.6.36"
+    "log4js": "^0.6.37"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
   }
 }

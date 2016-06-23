@@ -2,6 +2,8 @@
 
 create nested log4js instances with nested categories
 
+[![Code Climate](https://codeclimate.com/github/alekzonder/log4js-nested/badges/gpa.svg)](https://codeclimate.com/github/alekzonder/log4js-nested)
+
 ## install
 
 ```
