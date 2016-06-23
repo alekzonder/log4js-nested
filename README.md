@@ -102,7 +102,7 @@ var fourLogger = threeLogger.getLogger('four');
 [2016-05-18 17:31:30.945] [ERROR] one.two.three.four - error
 ```
 
-see all examples [examples](examples)
+see all [examples](examples)
 
 
 ## License
