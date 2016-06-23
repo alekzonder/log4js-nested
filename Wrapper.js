@@ -47,63 +47,116 @@ class Wrapper {
     }
 
     /**
-     * configure log4js
+     * proxy getDefaultLogger
      *
-     * @param  {Object} config
+     * @return {*}
      */
-    configure(config) {
-        this._log4js.configure(config);
+    getDefaultLogger() {
+        return this.getLogger('default');
     }
 
-    /**
-     * set global log level
-     *
-     * @param {String} level
-     */
-    setGlobalLogLevel(level) {
-        this._log4js.setGlobalLogLevel(level);
+    /* proxing log4js functions */
+
+    getBufferedLogger() {
+        return this._log4js.getBufferedLogger.apply(this._log4js, arguments);
+    }
+
+    /* getLogger() see below */
+
+    /* getDefaultLogger() see below */
+
+    hasLogger() {
+        return this._log4js.hasLogger.apply(this._log4js, arguments);
+    }
+
+    addAppender() {
+        return this._log4js.addAppender.apply(this._log4js, arguments);
+    }
+
+    loadAppender() {
+        return this._log4js.loadAppender.apply(this._log4js, arguments);
+    }
+
+    clearAppenders() {
+        return this._log4js.clearAppenders.apply(this._log4js, arguments);
+    }
+
+    configure() {
+        return this._log4js.configure.apply(this._log4js, arguments);
+    }
+
+    shutdown() {
+        return this._log4js.shutdown.apply(this._log4js, arguments);
+    }
+
+    replaceConsole() {
+        return this._log4js.replaceConsole.apply(this._log4js, arguments);
+    }
+
+    restoreConsole() {
+        return this._log4js.restoreConsole.apply(this._log4js, arguments);
+    }
+
+    get levels() {
+        return this._log4js.levels;
+    }
+
+    setGlobalLogLevel() {
+        this._log4js.setGlobalLogLevel.apply(this._log4js, arguments);
+    }
+
+    get layouts() {
+        return this._log4js.layouts;
+    }
+
+    get appenders() {
+        return this._Log4js.appenders;
+    }
+
+    get appenderMakers() {
+        return this._Log4js.appenderMakers;
     }
 
     /**
      * set log level
      */
     setLevel() {
-        this._logger.setLevel.apply(this._logger, arguments);
+        return this._logger.setLevel.apply(this._logger, arguments);
     }
 
     /**
      * trace wrap
      */
     trace() {
-        this._logger.trace.apply(this._logger, arguments);
+        return this._logger.trace.apply(this._logger, arguments);
     }
 
     /**
      * debug wrap
      */
     debug() {
-        this._logger.debug.apply(this._logger, arguments);
+        return this._logger.debug.apply(this._logger, arguments);
     }
 
     /**
      * info wrap
      */
     info() {
-        this._logger.info.apply(this._logger, arguments);
+        return this._logger.info.apply(this._logger, arguments);
     }
 
     /**
      * warn wrap
      */
     warn() {
-        this._logger.warn.apply(this._logger, arguments);
+        return this._logger.warn.apply(this._logger, arguments);
     }
 
     /**
      * error wrap
      */
     error() {
-        this._logger.error.apply(this._logger, arguments);
+        return this._logger.error.apply(this._logger, arguments);
     }
 
     /**
