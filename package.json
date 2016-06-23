@@ -1,31 +1,34 @@
 {
   "name": "log4js-nested",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "log4js with nested loggers",
-  "main": "index.js",
-  "scripts": {
-      "test": "./node_modules/.bin/mocha tests"
+  "author": "alekzonder <alekzonder@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/alekzonder/log4js-nested/issues"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/alekzonder/log4js-nested.git"
-  },
-  "engines": {
-    "node": ">=4"
-  },
-  "files": ["index.js", "wrap.js", "Wrapper.js"],
+  "homepage": "https://github.com/alekzonder/log4js-nested",
+  "license": "MIT",
   "keywords": [
     "log",
     "logger",
     "log4js",
     "nested"
   ],
-  "author": "alekzonder <alekzonder@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/alekzonder/log4js-nested/issues"
+  "files": ["index.js", "wrap.js", "Wrapper.js"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alekzonder/log4js-nested.git"
   },
-  "homepage": "https://github.com/alekzonder/log4js-nested",
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "main": "index.js",
+  "scripts": {
+      "test": "./node_modules/.bin/mocha tests"
+  },
   "dependencies": {
     "log4js": "^0.6.37"
   },
