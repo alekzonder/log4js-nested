@@ -22,10 +22,10 @@ var log4js = require('log4js-nested');
 var mainLogger = log4js.getLogger('main');
 mainLogger.info('main');
 
-var nextLogger = mainLogger.info('next');
+var nextLogger = mainLogger.getLogger('next');
 nextLogger.info('next');
 
-var deeperLogger = nextLevelLogger.info('deeper');
+var deeperLogger = nextLevelLogger.getLogger('deeper');
 deeperLogger.info('deep');
 
 var veryDeepLogger = deeperLogger.getLogger('very-deeper');
