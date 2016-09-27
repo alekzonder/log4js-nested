@@ -19,6 +19,18 @@ npm i log4js-nested
 ```js
 var log4js = require('log4js-nested');
 
+log4js.getLogger('one').getLogger('two').getLogger('three').info('yo!');
+
+// output
+[2016-05-18 17:06:39.010] [INFO] one.two.three - yo!
+
+```
+
+one more example
+
+```js
+var log4js = require('log4js-nested');
+
 var mainLogger = log4js.getLogger('main');
 mainLogger.info('main');
 
@@ -31,16 +43,14 @@ deeperLogger.info('deep');
 var veryDeepLogger = deeperLogger.getLogger('very-deeper');
 veryDeepLogger.info('deep');
 
-// ...
-```
+// output
 
-#### output
-```
 [2016-05-18 17:06:39.002] [INFO] main - main
 [2016-05-18 17:06:39.009] [INFO] main.next - next
 [2016-05-18 17:06:39.010] [INFO] main.next.deeper - deep
 [2016-05-18 17:06:39.010] [INFO] main.next.deeper.very-deeper - deep
 ```
+
 
 also you can wrap your own log4js instance
 
