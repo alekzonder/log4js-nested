@@ -17,7 +17,7 @@
   "files": [
     "index.js",
     "wrap.js",
-    "Wrapper.js"
+    "src"
   ],
   "repository": {
     "type": "git",
@@ -31,13 +31,15 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha tests"
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha test/index.js"
   },
   "dependencies": {
     "log4js": "^0.6.37"
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^2.5.3"
+    "codeclimate-test-reporter": "^0.3.3",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.0.2"
   }
 }
