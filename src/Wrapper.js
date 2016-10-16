@@ -52,7 +52,7 @@ class Wrapper {
      * @return {*}
      */
     getDefaultLogger() {
-        return this.getLogger('default');
+        return this.getLogger();
     }
 
     /* proxing log4js functions */
