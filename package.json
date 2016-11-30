@@ -3,6 +3,11 @@
   "version": "0.2.0",
   "description": "log4js with nested loggers",
   "author": "alekzonder <alekzonder@gmail.com>",
+  "scripts": {
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha test/index.js",
+    "lint": "./node_modules/.bin/eslint -c .eslintrc.js src examples index.js wrap.js",
+    "lint:fix": "./node_modules/.bin/eslint -c .eslintrc.js --fix src examples index.js wrap.js"
+  },
   "bugs": {
     "url": "https://github.com/alekzonder/log4js-nested/issues"
   },
@@ -30,15 +35,13 @@
     "node": ">=4"
   },
   "main": "index.js",
-  "scripts": {
-    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha test/index.js"
-  },
   "dependencies": {
     "log4js": "^0.6.37"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "codeclimate-test-reporter": "^0.4.0",
+    "eslint": "^3.11.1",
     "istanbul": "^0.4.5",
     "mocha": "^3.1.2"
   }
