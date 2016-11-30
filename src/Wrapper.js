@@ -159,7 +159,8 @@ class Wrapper {
      * @return {*}
      */
     warn () {
-        return this._logger.warn.apply(this._logger, arguments);
+        var args = this._processTerrorArgument(arguments);
+        return this._logger.warn.apply(this._logger, args);
     }
 
     /**
@@ -168,7 +169,8 @@ class Wrapper {
      * @return {*}
      */
     error () {
-        return this._logger.error.apply(this._logger, arguments);
+        var args = this._processTerrorArgument(arguments);
+        return this._logger.error.apply(this._logger, args);
     }
 
     /**
@@ -177,7 +179,8 @@ class Wrapper {
      * @return {*}
      */
     fatal () {
-        return this._logger.fatal.apply(this._logger, arguments);
+        var args = this._processTerrorArgument(arguments);
+        return this._logger.fatal.apply(this._logger, args);
     }
 
     /**
@@ -193,6 +196,28 @@ class Wrapper {
         }
 
         return `${this._category}.${category}`;
+    }
+
+    /**
+     * process terror error object stack
+     *
+     * @see https://github.com/nodules/terror
+     *
+     * @param {Object} args
+     * @return {Boolean}
+     */
+    _processTerrorArgument (args) {
+
+        if (
+            args && args[0] &&
+            args[0]._isTerror === true &&
+            typeof args[0].getFullStack === 'function'
+        ) {
+            args[0] = args[0].getFullStack();
+        }
+
+        return args;
+
     }
 
 }
