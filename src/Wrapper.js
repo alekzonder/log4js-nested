@@ -184,6 +184,30 @@ class Wrapper {
     }
 
     /**
+     * console.time
+     *
+     * @param {String} name
+     */
+    time (name) {
+        if (typeof process.env.DEBUG_PERF === 'string') {
+            console.time(name);
+        }
+    }
+
+    /**
+     * console.timeEnd
+     *
+     * @param {String} name
+     */
+    timeEnd (name) {
+
+        if (typeof process.env.DEBUG_PERF === 'string') {
+            console.timeEnd(name);
+        }
+
+    }
+
+    /**
      * get category helper
      *
      * @private
