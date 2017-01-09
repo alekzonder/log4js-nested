@@ -190,7 +190,7 @@ class Wrapper {
      */
     time (name) {
         if (typeof process.env.DEBUG_PERF === 'string') {
-            console.time(name);
+            console.time(this._category + ':' + name);
         }
     }
 
@@ -202,7 +202,7 @@ class Wrapper {
     timeEnd (name) {
 
         if (typeof process.env.DEBUG_PERF === 'string') {
-            console.timeEnd(name);
+            console.timeEnd(this._category + ':' + name);
         }
 
     }
