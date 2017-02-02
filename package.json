@@ -36,7 +36,7 @@
   },
   "main": "index.js",
   "dependencies": {
-    "log4js": "^0.6.37"
+    "log4js": "1.1.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
