@@ -1,6 +1,6 @@
 {
   "name": "log4js-nested",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "log4js with nested loggers",
   "author": "alekzonder <alekzonder@gmail.com>",
   "scripts": {
